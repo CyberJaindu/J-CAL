@@ -4,7 +4,7 @@
 - 💞️ I’m looking to collaborate on ...
 - 📫 How to reach me ...
 
- #J-Banner
+J-Banner
  ##for termux👇
 pkg update
  pkg upgrade
