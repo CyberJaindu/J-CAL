@@ -13,6 +13,10 @@
 
 -pkg install ruby
 
+-pkg install cowsay
+
+-pkg install figlet
+
 -pkg install wget
 
 -gem install lolcat
