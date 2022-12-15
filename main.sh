@@ -1,64 +1,51 @@
-#color
-r='\e[1;31m'
-g='\e[1;32m'
-y='\e[1;33m'
-b='\e[1;34m'
-p='\e[1;35m'
-lb='\e[1;36m'
+def add(a,b):
+        print("Answer is ",a+b)
+
+def sub(a,b):
+        print("Answer is ",a-b)
+
+def multy(a,b):
+        print("Answer is ",a*b)
+
+def divide(a,b):
+        print("Answer is ",a/b)
 
 
+def banner():
+        print("")
+        print("      ██╗       █████╗    █████╗ ██╗")
+        print("      ██       ██╔══██╗  ██╔══██╗██║")
+        print("      ██║█████╗██║  ╚═╝  ███████║██║")
+        print("██    ██║╚════╝██║   ██╗ ██╔══██║██║")
+        print("╚█████╔╝        ╚█████╔╝ ██   ██║███████╗")
+        print(" ╚════           ╚════╝  ╚═   ╚═╝╚══════╝")
+        print("                     TOOL BY CYBER JAINDU")
+        print("")
+        print("")
+        print("")
+        print(' [1] ADD')
+        print(' [2] SUB')
+        print(' [3] MULTIPLY')
+        print(' [4] DIVIDE')
+        print('')
 
 
-echo
+def main ():
+        x=int(input( "Enter your Choise : "))
+        a=int(input( "Enter First No : "))
+        b=int(input( "Enter Second No : "))
+
+        if x==1:
+                add(a,b)
+        elif x==2:
+                sub(a,b)
+        elif x==3:
+                multy(a,b)
+        elif x==4:
+                divide(a,b)
+        else:
+                print("error")
 
 
-echo -e $g "     ██╗      ██████╗  █████╗ ███   ██╗███████╗██████╗"
-echo -e $g "     ██║      ██╔══██╗██╔══██╗████╗ ██║██╔════╝██╔══██╗"
-echo -e $g "     ██║█████╗██████╦╝███████║██╔██╗██║█████╗  ██████╔╝"
-echo -e $g "██╗  ██║╚════╝██╔══██╗██╔══██║██║╚████║██╔══╝  ██╔══██╗"
-echo -e $g "╚█████╔╝      ██████╦╝██║  ██║██║ ╚███║███████╗██║  ██║"
-echo -e $g " ╚════╝       ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚══╝╚══════╝╚═╝  ╚═╝"
-echo -e $r "                                   TOOL BY CYBER JAINDU"
-echo
-echo
-echo
-echo
-
-
-
-
-
-
-echo -e $b "WHAT IS YOUR BANNER NAME ? : \c"
-read varBname
-echo
-echo
-echo -e $b "WHAT IS YOUR NAME ? : \c"
-read varname
-
-echo "cowsay -f eyes "$varname" | lolcat " > name.txt
-echo "figlet "$varBname" | lolcat " > Bname.txt
-echo "clear" > clear.txt
-echo "PS1='\$ ' " > Temp.txt
-
-
-#remove old files
-rm -rf /data/data/com.termux/files/usr/etc/zshrc
-rm -rf /data/data/com.termux/files/usr/etc/bash.bashrc
-
-#inject files to zshrc
-cat "clear.txt" >> /data/data/com.termux/files/usr/etc/zshrc
-cat "name.txt" >> /data/data/com.termux/files/usr/etc/zshrc
-cat "Bname.txt" >> /data/data/com.termux/files/usr/etc/zshrc
-cat "Temp.txt" >> /data/data/com.termux/files/usr/etc/zshrc
-
-#inject files to bash.bashrc
-cat "clear.txt" >> /data/data/com.termux/files/usr/etc/bash.bashrc
-cat "name.txt" >> /data/data/com.termux/files/usr/etc/bash.bashrc
-cat "Bname.txt" >> /data/data/com.termux/files/usr/etc/bash.bashrc
-cat "Temp.txt" >> /data/data/com.termux/files/usr/etc/bash.bashrc
-
-rm -rf name.txt Baname.txt clear.txt Temp.txt
-echo
-figlet FINISH | lolcat
-echo -e $r "PLEASE RESTART YOUR TERMUX"
+banner()
+main()
