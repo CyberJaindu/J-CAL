@@ -1,6 +1,6 @@
 -pkg install python
 
--git clone
+-git clone https://github.com/CyberJaindu/J-CAL
 
 -ls
 
